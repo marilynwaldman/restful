@@ -18,6 +18,7 @@ defmodule RestfulWeb.Router do
 
     get "/", PageController, :index
     live "/counter", CounterLive
+    resources "/roles", RoleController
   end
 
   # Other scopes may use custom stacks.

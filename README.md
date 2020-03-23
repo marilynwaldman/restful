@@ -23,6 +23,18 @@ https://github.com/phoenixframework/phoenix_live_view/blob/master/guides/introdu
 
 5.  create tables and databases
 
+The first argument is the context module followed by the schema module and its plural name 
+(used as the schema table name).
+
+The context is an Elixir module that serves as an API boundary for the given resource.
+ A context often holds many related resources. Therefore, if the context already exists, 
+ it will be augmented with functions for the given resource.
+
+`mix phx.gen.html Authorization Role roles name:string`
+
+`mix phx.gen.html Accounts User users name:string role_id:references:roles`
+
+
 
 ## Learn more
 
